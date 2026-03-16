@@ -1,0 +1,81 @@
+sudo apt install git -y
+
+git config --global user.name "akashks05"
+
+git config --global user.email "akashksmysuru@gmail.com"
+
+git config --list
+
+mkdir github-projects
+
+cd github-projects
+
+git init
+
+git clone https://github.com/akashks05/git-lab-experiment.git
+
+cd git-lab-experiment/
+
+nano project.txt
+
+git add project.txt
+
+git commit -m "Initial Commit"
+
+git branch
+
+git push origin master
+
+git branch feature-branch
+
+git checkout feature-branch
+
+nano project.txt
+
+git add project.txt
+
+git commit -m "Feature branch update"
+
+git push origin feature-branch
+
+mkdir git-merge-demo
+
+cd git-merge-demo
+
+git init
+
+echo "Version 1" > file1.txt
+
+git add .
+
+git commit -m "Initial Commit"
+
+git checkout -b feature
+
+echo "Feature version" > file1.txt
+
+git commit -am "changed in feature"
+
+git checkout main
+
+echo "main version" > file1.txt
+
+git commit -am "changed in main"
+
+git merge feature
+
+git status
+
+cat file1.txt
+
+echo "Hello from main and Feature branch" > file1.txt
+
+git add .
+
+git merge feature
+
+git commit -m "resolved merge conflict"
+
+git merge feature
+
+git log
