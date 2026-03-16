@@ -1,0 +1,33 @@
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+sudo rm -rf ~/jenkins
+ls
+java -jar jenkins.war --httpPort=8090
+Open browser → go to http://localhost:8090
+AishwaryaGM
+Shuba14
+#!/bin/bash
+echo "Hi Hello. Good Morning"
+echo "Have a nice day"
+pipeline {
+    agent any
+    stages {
+        stage('Clone') {
+            steps {
+                git url: 'https://github.com/AishwaryaGirish12/JenkinsDemo2.git', branch: 'main'
+            }
+        }
+        stage('Run Script') {
+            steps {
+                sh 'chmod +x script.sh'
+                sh './script.sh'
+            }
+        }
+    }
+}
+ngrok --version
+sudo apt update
+sudo apt install snapd -y
+sudo snap install ngrok
+ngrok http 8090
+/github-webhook/
