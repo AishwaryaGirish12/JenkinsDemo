@@ -1,0 +1,31 @@
+git config --global user.name "AishwaryaGirish12"
+git config --global user.email "aishwaryagirish1211@gmail.com"
+git config --list
+
+mkdir Akash
+cd Akash
+
+git init
+
+touch index.txt
+
+git status
+
+git add README.md
+git add .
+
+git commit -m "Initial project commit"
+
+git log
+
+git remote add origin https://github.com/Akashks05/MyProject.git
+
+git remote -v
+
+git branch -M main
+
+git push -u origin main
+
+git clone https://github.com/Akashks05/MyProject.git
+
+git reset --hard
